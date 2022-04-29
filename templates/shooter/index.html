@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>underworld</title>
+</head>
+{% block content %}
+<body style="background-color:pink;">
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong>{{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+<h3>Just for pure devil mind</h3>
+
+{% if user.is_authenticated %}
+<h3>Hello {{user.username}} and {{ user.email }} </h3>
+<h4>You are successfully logged in</h4>
+<button  type="submit"><a href="/signout">Sigout</a></button>
+
+{% else %}
+<button type="submit" ><a href="/signup">Signup</a></button>
+<button type="submit"><a href="/signin">Signin</a></button>
+{% endif %}
+{% endblock  %}
+</body>
+
+</html>

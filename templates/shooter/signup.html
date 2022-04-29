@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>get ready</title>
+</head>
+
+<body style="background-color:orange;">
+<h3 style="text-align:center">Welcome- join our company-be a shooter</h3>
+
+<form action="/signup" method="post">
+    {% csrf_token %}
+    <label for="username">username</label>
+    <input type="text" id="username" name="username" placeholder="create a username(only numbers and letters )" required><br><br>
+
+    <label for="first_name">First name</label>
+    <input type="text" id="first_name" name="first_name" placeholder="enter first name" required><br><br>
+
+    <label for="last_name">last name</label>
+    <input type="text" id="last_name" name="last_name" placeholder="enter last name"><br><br>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="write correct email address which can be verified" required><br><br>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="create password" required><br><br>
+
+    <label for="password2">Confirm password</label>
+    <input type="password" id="password2" name="password2" placeholder="create password" required><br><br>
+
+    <button type="submit" >Sign up</button>
+
+
+</form>
+</body>
+
+</html>
