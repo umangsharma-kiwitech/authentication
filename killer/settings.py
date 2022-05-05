@@ -34,8 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shooter',
-    'rest_framework',
-    'django_email_verification',
+
+
 ]
 
 MIDDLEWARE = [
